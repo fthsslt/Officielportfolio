@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	
+	
+	
+	
+	<title>Accueil</title>
+
+	<link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+	<script src="libs/swiper/swiper-bundle.min.js" defer></script>
+	<script src="libs/particles/particles.js" defer></script>
+	<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+	<link rel="preload" href="index2.html" as="document">
+    <link rel="preload" href="index3.html" as="document">
+    <link rel="preload" href="page3.html" as="document">
+
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+    <script src="libs/swiper/swiper-bundle.min.js" defer></script>
+	<script src="js/app.js" defer></script>
+
+</head>
+
+<body>
+	<header>
+		<a id="homeLink" href="#home" class="logo">Home</a>
+		<ul>
+
+			<li><a id="videoLink" href="#video">Vidéo</a></li>
+			<li><a id="graphismesLink" href="#graphismes">Graphisme</a></li>
+			<li><a id="codesLink" href="#codes">Code</a></li>
+			<li><a id="galleryLink" href="#Galerie">Galerie</a></li>
+
+		</ul>
+	</header>
+	<div class="swiper slider">
+		<div class="swiper-wrapper slider__wrapper">
+
+			<div class="swiper-slide slider__item">
+				
+				<h1 id="title" class="portfolio fth"><a id="linkToIndex2" href="index2.html">Fathallah ZOBIR</a></h1>
+				<span class="portfolio"><a id="home" href="index3.html" ></a></span>
+				<div class="slider__layer" data-swiper-parallax="35%"
+					style="background-image: url(img/screen-1/back.png);"></div>
+				<div class="slider__layer" data-swiper-parallax="25%"
+					style="background-image: url(img/screen-1/Untitled-2.png);"></div>
+				<canvas class="particles slider__layer" data-swiper-parallax="18%" data-color="#BE9164"></canvas>
+				<div class="slider__layer" data-swiper-parallax="14%"
+					style="background-image: url(img/screen-1/layer-front.png);"></div>
+			</div>
+
+			<div class="swiper-slide slider__item" ">
+				<h1 id="" class="portfolio"><a id="video" href="Vidéos.html">Vidéos</a></h1>
+				<div class=" slider__layer" data-swiper-parallax="40%" style="background-image: url(img/screen-2/layer-back.jpg);">
+			</div>
+			<div class="slider__layer" data-swiper-parallax="34%"
+				style="background-image: url(img/screen-2/Back.png);"></div>
+			<div class="slider__layer" data-swiper-parallax="30%"
+				style="background-image: url(img/screen-2/layer.png);"></div>
+			<canvas class="particles slider__layer" data-swiper-parallax="20%" data-color="#525A6D"></canvas>
+			<div class="slider__layer" data-swiper-parallax="14%"
+				style="background-image: url(img/screen-2/front.png);"></div>
+		</div>
+
+			<div class="swiper-slide slider__item" ">
+				<h1 id="" class="portfolio"><a id="graphismes" href="graphisme.html">Graphisme</a></h1>
+				<div class=" slider__layer" data-swiper-parallax="40%" style="background-image: url(img/screen-2/layer-back.jpg);">
+			</div>
+			<div class="slider__layer" data-swiper-parallax="34%"
+				style="background-image: url(img/screen-3/back.png);"></div>
+			<div class="slider__layer" data-swiper-parallax="30%"
+				style="background-image: url(img/screen-3/middle.png);"></div>
+			<canvas class="particles slider__layer" data-swiper-parallax="20%" data-color="#525A6D"></canvas>
+			<div class="slider__layer" data-swiper-parallax="14%"
+				style="background-image: url(img/screen-3/devant.png);"></div>
+		</div>
+
+		<div class="swiper-slide slider__item">
+			<h1 id="" class="portfolio"><a id="codes" href="Web.html">Codes</a></h1>
+			<div class="slider__layer" data-swiper-parallax="48%"
+				style="background-image: url(img/screen-3/back1.png);"></div>
+			<div class="slider__layer" data-swiper-parallax="35%"
+				style="background-image: url();"></div>
+			<div class="slider__layer" data-swiper-parallax="29%"
+				style="background-image: url();"></div>
+			<canvas class="particles slider__layer" data-swiper-parallax="25%" data-color="#938086"></canvas>
+			<div class="slider__layer" data-swiper-parallax="16%"
+				style="background-image: url(img/screen-3/devant1.png);"></div>
+		</div>
+
+
+
+		<div class="swiper-slide slider__item">
+			<h1  class="portfolio"><a id="Galerie" href="index3.html">Galerie</a></h1>
+			<div class="slider__layer" data-swiper-parallax="48%"
+				style="background-image: url(img/screen-3/devantv2.png);"></div>
+			<div class="slider__layer" data-swiper-parallax="35%"
+				style="background-image: url();"></div>
+			<div class="slider__layer" data-swiper-parallax="29%"
+				style="background-image: url();"></div>
+			<canvas class="particles slider__layer" data-swiper-parallax="25%" data-color="#938086"></canvas>
+			<div class="slider__layer" data-swiper-parallax="16%"
+				style="background-image: url(img/screen-3/backv2.png);"></div>
+		</div>
+	</div>
+	</div>
+<!-- ... Votre code HTML ... -->
+
+<script>
+    document.getElementById("linkToIndex2").addEventListener("click", function(event) {
+        event.preventDefault();
+        document.body.classList.add("fade-out");
+        setTimeout(function() {
+            window.location.href = "index2.html";
+        }, 2000); // Délai en millisecondes, correspond à la durée de l'effet fade-out
+    });
+</script>
+
+<!-- ... (votre code HTML existant) ... -->
+
+
+
+<!-- ... (votre code CSS existant) ... -->
+
+
+<style>
+	body {
+    opacity: 0;
+}
+
+	/* ... Vos styles CSS ... */
+	.fade-out {
+		background-color: black;
+		opacity: 1;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 9999;
+		animation: fadeOutAnimation 2s ease-in-out;
+	}
+
+	@keyframes fadeOutAnimation {
+		0% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+	#linkToIndex2{
+		text-decoration: none;
+		color: white;
+	}
+	/* Ajoutez ce style CSS à la fin de votre feuille de style */
+.fade-in {
+    transition: opacity 1s ease-in-out; /* Transition de l'opacité sur 1 seconde */
+}
+
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Sélectionnez le corps de la page
+        const body = document.body;
+
+        // Ajoutez une classe pour appliquer l'effet de fondu
+        body.classList.add("fade-in");
+
+        // Attendez un court délai avant d'ajuster l'opacité
+        setTimeout(function() {
+            body.style.opacity = "1";
+        }, 100); // Temps d'attente en millisecondes (ajustez selon vos besoins)
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const elementsToFadeIn = document.querySelectorAll(".fade-in");
+        elementsToFadeIn.forEach(function(element, index) {
+            setTimeout(function() {
+                element.classList.add("fade-in");
+            }, index * 100); // Adjust the time delay (in milliseconds) between elements
+        });
+
+        document.getElementById("linkToIndex2").addEventListener("click", function(event) {
+            event.preventDefault();
+            document.body.classList.add("fade-out");
+            setTimeout(function() {
+                window.location.href = "index2.html";
+            }, 2300); // Délai en millisecondes, correspond à la durée de l'effet fade-out
+        });
+    });
+</script>
+<script>
+// Obtenez des références aux éléments nécessaires
+const swiper = new Swiper(".swiper", {
+    // ... votre configuration Swiper existante ...
+});
+
+// Initialisez "smooth-scroll" avec des options personnalisées
+const scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 1000, // Vitesse de l'animation de défilement (en millisecondes)
+    easing: 'easeInOutCubic' // Courbe d'animation de défilement
+});
+
+// Ajoutez un écouteur d'événements de clic au lien de la galerie
+document.addEventListener("DOMContentLoaded", function() {
+    const galleryLink = document.getElementById("galleryLink");
+    galleryLink.addEventListener("click", function (event) {
+        event.preventDefault(); // Empêche le comportement de lien par défaut
+        
+        // Obtenez la cible de défilement à partir de l'attribut href du lien
+        const target = document.querySelector(galleryLink.getAttribute("href"));
+        
+        // Utilisez "smooth-scroll" pour faire défiler vers la cible
+        scroll.animateScroll(target);
+        
+        // Activez la diapositive correspondante dans le slider Swiper
+        swiper.slideTo(3, 1000); // Remplacez 3 par l'index de la diapositive Galerie
+    });
+});
+
+</script>
+<!--<script>
+
+	// Gestionnaire d'événement pour le lien de la galerie
+	const homeLink = document.getElementById("home");
+	homeLink.addEventListener("click", function(event) {
+		event.preventDefault();
+		const target = homeLink.getAttribute("href");
+		scrollToSection(target);
+	});
+	
+	// Gestionnaire d'événement pour le lien de la galerie
+	const galleryLink = document.getElementById("Galerie");
+	galleryLink.addEventListener("click", function(event) {
+		event.preventDefault();
+		const target = galleryLink.getAttribute("href");
+		scrollToSection(target);
+	});
+
+
+		// Gestionnaire d'événement pour le lien de la galerie
+		const videoLink = document.getElementById("video");
+	videoLink.addEventListener("click", function(event) {
+		event.preventDefault();
+		const target = vidoeLink.getAttribute("href");
+		scrollToSection(target);
+	});
+
+
+	const codesLink = document.getElementById("codes");
+	codesLink.addEventListener("click", function(event) {
+		event.preventDefault();
+		const target = codesLink.getAttribute("href");
+		scrollToSection(target);
+	});
+
+	const graphismesLink = document.getElementById("graphismes");
+	graphismesLink.addEventListener("click", function(event) {
+		event.preventDefault();
+		const target = graphismesLink.getAttribute("href");
+		scrollToSection(target);
+	});
+</script>
+
+-->
+
+</body>
+
+	</html>
+	
+
+</html>

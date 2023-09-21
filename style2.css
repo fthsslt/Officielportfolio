@@ -1,0 +1,294 @@
+@charset "UTF-8";
+.html {
+  font-family: "Raleway", sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #C8C2AA;
+  background-size: 4px 4px;
+  background-image: linear-gradient(90deg, transparent, transparent 3px, rgba(0, 0, 0, 0.07) 4px), linear-gradient(transparent, transparent 3px, rgba(0, 0, 0, 0.07) 4px);
+  box-shadow: inset 0 0 150px rgba(77, 73, 62, 0.4), inset 0 0 150px rgba(77, 73, 62, 0.3);
+  z-index: -1; /* Placez-le en arrière-plan */
+}
+
+body {
+  color: #4D493E;
+  font-family: "Noto Sans", sans-serif;
+  letter-spacing: 0.1rem;
+  margin: 0;
+  overflow-x: hidden;
+
+  
+}
+
+
+.arrow-right, .nier-list li.active {
+  border-right: 20px solid #6b6450;
+}
+
+.line-border, nav {
+  border-left: 15px solid #beb89f;
+}
+.line-border:before, nav:before {
+  content: "";
+  border-left: 5px solid #beb89f;
+  margin-right: 15px;
+  margin-left: 3px;
+}
+
+.hover-class, .nier-list li {
+  cursor: pointer;
+  background: #beb89f;
+  color: #4e493a;
+}
+.hover-class:hover, .nier-list li:hover {
+  background: #4e493a;
+  color: #beb89f;
+}
+.hover-class:hover *, .nier-list li:hover * {
+  color: #beb89f;
+}
+
+.card {
+
+  color: #4e493a;
+  box-shadow: 2px 2px 0 2px #a59e83;
+  padding: 5px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #4e493a;
+  text-shadow: 5px 5px 0 rgba(146, 140, 126, 0.37);
+  font-weight: 400;
+  letter-spacing: 10px;
+  opacity: 0.8;
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  font-size: 50%;
+}
+
+h1, h2 {
+  font-size: 42px;
+}
+
+h2:after {
+  content: "_";
+  -webkit-animation: 4s blink infinite linear;
+          animation: 4s blink infinite linear;
+}
+
+p, span {
+  color: #4e493a;
+}
+
+.container {
+  width: 95%;
+  margin: auto;
+}
+
+nav {
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+nav:after {
+  position: absolute;
+  top: 95px;
+  left: 0;
+  content: "";
+  width: 100%;
+  border-bottom: 2px solid #4e493a;
+  opacity: 0.8;
+}
+nav div {
+  flex: 1;
+  background: #beb89f;
+  max-width: 150px;
+  margin-right: 30px;
+  opacity: 0.8;
+  cursor: pointer;
+  position: relative;
+}
+nav div:hover {
+  background: #4e493a;
+}
+nav div:hover span {
+  color: #beb89f;
+}
+nav div:hover:before {
+  content: ":";
+  position: absolute;
+  left: -13px;
+  top: calc(50% - 13px);
+  font-size: 14px;
+  font-weight: bold;
+  color: #4e493a;
+}
+nav div span {
+  color: #4e493a;
+  display: inline-block;
+  padding: 5px;
+  font-size: 20px;
+  padding: 5px;
+  padding-left: 30px;
+  position: relative;
+}
+nav div span:before {
+  position: absolute;
+  left: 5px;
+  content: "◼︎";
+  margin-right: 3px;
+  vertical-align: middle;
+  font-size: 24px;
+}
+
+.nier-list {
+  border-left: 15px solid #beb89f;
+  position: relative;
+}
+.nier-list:before {
+  content: "";
+  border-left: 5px solid #beb89f;
+  margin-right: 15px;
+  margin-left: 3px;
+  position: absolute;
+  height: 100%;
+}
+.nier-list ul {
+  margin: 0;
+  padding: 0;
+  margin-left: 30px;
+}
+.nier-list li {
+  list-style: none;
+  margin-bottom: 30px;
+  max-width: 30vw;
+  padding: 5px;
+  position: relative;
+}
+.nier-list li:hover:before {
+  content: ":";
+  position: absolute;
+  left: -16px;
+  top: calc(50% - 12px);
+  font-size: 20px;
+  font-weight: bold;
+  color: #4e493a;
+}
+.nier-list li.active {
+  position: relative;
+  background: #4e493a;
+  color: #beb89f;
+}
+
+@-webkit-keyframes blink {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* ... (styles existants) ... */
+
+/* Styles pour la galerie d'images avec 4 images par ligne */
+.image-gallery,
+.image-gallery1,
+.image-gallery2 {
+  display: grid;
+  gap: 20px;
+  max-width: 100%;
+}
+
+.gallery-item,
+.gallery-item1,
+.gallery-item2 {
+  text-align: center;
+}
+
+.gallery-item img,
+.gallery-item1 img,
+.gallery-item2 img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 3px 3px 0 rgba(77, 73, 62, 0.6);
+}
+
+/* Réactivité pour ajuster le nombre d'images par ligne */
+
+/* Pour les écrans de taille moyenne (600px et plus) */
+@media screen and (min-width: 600px) {
+  .image-gallery {
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+  }
+
+  .gallery-item img {
+    max-width: 100%;
+  }
+}
+
+/* Pour les écrans plus larges (900px et plus) */
+@media screen and (min-width: 900px) {
+  .image-gallery1 {
+    grid-template-columns: repeat(5, minmax(200px, 1fr));
+  }
+
+  .gallery-item1 img {
+    max-width: 100%;
+  }
+}
+
+/* Pour les écrans encore plus larges (1200px et plus) */
+@media screen and (min-width: 1200px) {
+  .image-gallery2 {
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+  }
+
+  .gallery-item2 img {
+    max-width: 70%;
+  }
+}
+
+/* ... (styles existants) ... */
+        /* Styling for the back arrow */
+        .back-arrow {
+            position: absolute;
+           
+            left: 10px;
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+            font-size: 24px;
+            transition: opacity 0.3s;
+        }
+
+        .back-arrow:hover {
+            opacity: 0.7;
+        }
+        
+    /* Transition pour l'effet de fondu en noir */
+.transition-to-black {
+  background-color: rgb(0, 0, 0);
+  transition: background-color 0.75s;
+}
+
+.transition-to-black::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  z-index: 9999; /* Placez-le au-dessus du contenu */
+  transition: background-color 0.75s;
+}

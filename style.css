@@ -1,0 +1,35 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+}
+header .headings {
+  text-align: center;
+}
+header .headings h1 {
+  font-size: 50px;
+  font-weight: 500;
+  margin-top: 0;
+}
+.galleryList,
+.galleryList-item {
+  padding-left: 0;
+  padding-right: 0;
+}
+.galleryList-item {
+  overflow: hidden;
+}
+.galleryList-item img {
+  filter: grayscale(1);
+  transition: all 0.3s ease;
+}
+.galleryList-item:hover img {
+  filter: grayscale(0);
+}
+.blurZoom:hover img {
+  transform: scale(1.1);
+}

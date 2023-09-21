@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* Adding white color for text */
+        .quisuis {
+            color: white;
+        }
+
+        /* Adjusting the layout */
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .col-md-4,
+        .col-md-8 {
+            flex: 1;
+            padding: 1rem;
+        }
+
+        /* Animation for the business card effect */
+        @keyframes slideInAnimation {
+            0% {
+                transform: translateY(-100%);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .card-container {
+            animation: slideInAnimation 1s forwards;
+        }
+
+        /* Styling for the back arrow */
+        .back-arrow {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            cursor: pointer;
+            font-size: 24px;
+            transition: opacity 0.3s;
+        }
+
+        .back-arrow:hover {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-arrow" id="backArrow">&larr;</a>
+    <div class="d-flex justify-content-center align-items-center vh-100">
+        <div class="container">
+            <div class="row justify-content-center align-items-center card-container">
+                <div class="col-md-8 quisuis" id="qui">
+                    <h2>Qui suis-je ?</h2>
+                    <p>
+                        Arrivé en France à l'âge de huit ans, je suis né en Algérie avec une citoyenneté franco-algérienne. J'ai
+                        toujours eu tendance à voir la vie comme une aventure passionnante remplie d'imprévus.
+                    </p>
+                    <h2>Quoi de neuf ?</h2>
+                    <p>
+                        Curieux, ouvert, ayant des facilités dans les disciplines tant scientifiques que artistiques, j'ai suivi des
+                        études me permettant d'avoir un large éventail de connaissances. J'ai d'abord obtenu un baccalauréat général
+                        spécialité Mathématique, science de la vie et de la terre.
+                        Puis j'ai continué en BUT MMI où j'ai choisi de me spécialiser en parcours création visuelle. Dès mon plus
+                        jeune âge, j'étais très intéressé par toutes sortes de médias. Je suis passionné par le graphisme,
+                        l'écriture, la photographie, la vidéo, la musique ou le développement web et c'est pourquoi j'ai choisi le
+                        BUT MMI. Je suis une personne ponctuelle et souvent trop perfectionniste, je souhaite me professionnaliser
+                        et faire de ma passion mon métier. Je suis à la recherche d'une alternance à partir de septembre 2023 dans
+                        le domaine de la création visuelle.
+                        <br> <br>
+                        Contactez-moi sur cette adresse : <span id="email" style="color: white;">zobirfathallah@gmail.com</span>
+                    </p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img alt="image de Fathallah" src="img/Fathallah3.png" class="img-fluid" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const emailSpan = document.getElementById('email');
+        emailSpan.addEventListener('click', () => {
+            const email = emailSpan.textContent;
+            navigator.clipboard.writeText(email).then(() => {
+                alert('Adresse e-mail copiée : ' + email);
+            }).catch(err => {
+                console.error('Erreur lors de la copie : ', err);
+            });
+        });
+
+        // Adding fade-out effect when clicking the back arrow
+        const backArrow = document.getElementById('backArrow');
+        backArrow.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent default link behavior
+            const elements = document.querySelectorAll('body > *:not(script)');
+            let opacity = 1;
+            const animationInterval = setInterval(() => {
+                opacity -= 0.1;
+                elements.forEach(element => {
+                    element.style.opacity = opacity;
+                });
+                if (opacity <= 0) {
+                    clearInterval(animationInterval);
+                    window.location.href = backArrow.getAttribute('href');
+                }
+            }, 75); // Adjust the interval to control the animation speed
+        });
+    </script>
+</body>
+</html>
